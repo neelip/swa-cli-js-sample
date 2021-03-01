@@ -22,7 +22,7 @@
         {
             "type": "shell",
             "label": "swa start",
-            "command": "swa start http://localhost:3000/",
+            "command": "swa start http://localhost:3000/ --api http://localhost:7071",
             "isBackground": true,
             "problemMatcher": [
                 {
