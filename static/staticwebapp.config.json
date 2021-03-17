@@ -44,7 +44,7 @@
         },
         {
             "route": "/rewrite-to-function",
-            "redirect": "/api/headers"
+            "rewrite": "/api/headers"
         }
     ],
     "navigationFallback": {
