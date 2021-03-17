@@ -12,7 +12,7 @@
         },
         {
             "route": "/redirect/*",
-            "redirect": "/index.html"
+            "redirect": "/index2.html"
         },
         {
             "route": "/*.google",
