@@ -61,7 +61,7 @@
         "500" : {
             "redirect": "/custom_error.html"
         },
-        "404": {
+        "501": {
             "rewrite": "custom_error.html"
         }
     },
