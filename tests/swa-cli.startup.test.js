@@ -1,6 +1,6 @@
 const spawn = require("cross-spawn");
 const waitOn = require("wait-on");
-const fetch = require("node-fetch");
+const fetch = require("node-fetch").default;
 const path = require("path");
 const find = require('find-process');
 
