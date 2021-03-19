@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest swa-cli.startup --forceExit"
+    "test-cli": "jest swa-cli-*.test.js --forceExit",
+    "test-config": "jest config-*.test.js"
   },
   "keywords": [],
   "author": "",
