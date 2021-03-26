@@ -38,7 +38,7 @@ test("content response contains global headers", async () => {
 // })
 
 test("route headers override global headers", async () => {
-    const response = await fetch(`${baseUrl}/redirect_index2`, { redirect: "manual" });
+    const response = await fetch(`${baseUrl}/rewrite_index2`, { redirect: "manual" });
     expect(response.headers.get("a")).toBe("c");
 });
 
