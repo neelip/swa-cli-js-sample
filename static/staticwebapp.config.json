@@ -48,7 +48,7 @@
         }
     ],
     "navigationFallback": {
-        "rewrite": "/index.html",
+        "rewrite": "/api/headers",
         "exclude": [
             "*.{txt}"
         ]
