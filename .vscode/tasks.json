@@ -37,7 +37,7 @@
                     "background": {
                         "activeOnStart": true,
                         "beginsPattern": ".",
-                        "endsPattern": "SWA listening on",
+                        "endsPattern": "Azure Static Web Apps emulator started",
                     }
                 }
             ],

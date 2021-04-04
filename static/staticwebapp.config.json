@@ -3,12 +3,12 @@
         {
             "route": "/redirect/301",
             "redirect": "/index2.html",
-            "statusCode": "301"
+            "statusCode": 301
         },
         {
             "route": "/redirect/302",
             "redirect": "/index2.html",
-            "statusCode": "302"
+            "statusCode": 302
         },
         {
             "route": "/redirect/*",
