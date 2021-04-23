@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 
-function callFunction(e) {
+function getData(e) {
   e.preventDefault();
-  return fetch("/api/headers");
+  return fetch("/api/data");
 }
 
 function App() {
@@ -14,8 +14,8 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload!
         </p>
-        <a className="App-link" href="https://reactjs.org" rel="noopener noreferrer" onClick={callFunction}>
-          Click me
+        <a className="App-link" href="https://azure.microsoft.com" rel="noopener noreferrer" onClick={getData}>
+          Get Data
         </a>
       </header>
     </div>
