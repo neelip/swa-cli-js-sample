@@ -20,7 +20,7 @@ test('starts with static files only', async () => {
 });
 
 test('starts with static files and api', async () => {
-    const cli = await spawnAndWait("swa", ["start", "../static", "--api", "../api"], 7071);
+    const cli = await spawnAndWait("swa", ["start", "../static", "--api", "../api"], 4280);
 
     const frontendResponse = await fetch("http://localhost:4280/");
     const doc = parseHtml(await frontendResponse.text());
@@ -47,7 +47,7 @@ test('starts with dev server', async () => {
 test('starts with dev server and api', async () => {
     jest.setTimeout(30000);
     const reactDevServer = await spawnAndWait("npm", ["start"], 3000, { cwd: path.join("..", "frontend") });
-    const cli = await spawnAndWait("swa", ["start", "http://localhost:3000", "--api", "../api"], 7071);
+    const cli = await spawnAndWait("swa", ["start", "http://localhost:3000", "--api", "../api"], 4280);
 
     const frontendResponse = await fetch("http://localhost:4280/");
     const doc = parseHtml(await frontendResponse.text());
