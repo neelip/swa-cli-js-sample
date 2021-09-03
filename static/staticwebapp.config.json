@@ -53,12 +53,12 @@
             "*.{txt}"
         ]
     },
-    "responseErrorOverrides": {
-        "400" : {
+    "responseOverrides": {
+        "400": {
             "rewrite": "/custom_error.html",
             "statusCode": 201
         },
-        "500" : {
+        "500": {
             "redirect": "/custom_error.html"
         },
         "501": {
