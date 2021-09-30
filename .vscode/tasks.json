@@ -2,29 +2,25 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "type": "swa",
+            "type": "shell",
             "label": "swa emulator",
-            "command": "start",
-            "options": {
-                "api": "api",
-                "app": "http://localhost:3000/",
-                "app-location": "frontend",
-                "run": "npm run start"
-            },
+            "command": "swa start http://localhost:3000/ --api http://localhost:7071 --run 'cd frontend && npm run start'",
+            "problemMatcher": "$swa-watch",
             "isBackground": true
         },
         {
-            "label": "Terminate All Tasks",
-            "command": "echo ${input:terminate}",
-            "type": "shell"
-        }
-    ],
-    "inputs": [
-        {
-            "id": "terminate",
-            "type": "command",
-            "command": "workbench.action.tasks.terminate",
-            "args": "terminateAll"
+            "type": "func",
+            "label": "func: host start",
+            "command": "host start",
+            "problemMatcher": "$func-node-watch",
+            "isBackground": true,
+            "dependsOn": "npm install (functions)",
+            "options": {
+                "cwd": "${workspaceFolder}/api",
+                "env": {
+                    "languageWorkers__node__arguments": "--inspect=9229"
+                }
+            }
         }
     ]
 }

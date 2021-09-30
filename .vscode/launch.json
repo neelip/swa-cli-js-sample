@@ -3,17 +3,19 @@
     "compounds": [
         {
             "name": "SWA: Run and Debug",
-            "presentation": {
-                "hidden": false,
-                "group": "SWA",
-                "order": 1,
-            },
             "configurations": [
                 "Debug Backend API",
                 "Debug Frontend"
             ],
-            "stopAll": true,
-            "postDebugTask": "Terminate All Tasks"
+            "stopAll": true
+        },
+        {
+            "name": "SWA: Attach to CLI",
+            "configurations": [
+                "Debug Frontend",
+                "Debug Backend API"
+            ],
+            "stopAll": true
         }
     ],
     "configurations": [
@@ -22,27 +24,21 @@
             "request": "launch",
             "type": "pwa-chrome",
             "url": "http://localhost:4280",
-            "webRoot": "${workspaceFolder}",
-            "presentation": {
-                "hidden": true,
-                "group": "",
-                "order": 1
-            },
             "preLaunchTask": "swa emulator",
-            "postDebugTask": "Terminate All Tasks"
+            "presentation": {
+                "hidden": true
+            }
         },
         {
             "name": "Debug Backend API",
             "type": "node",
             "request": "attach",
+            "preLaunchTask": "func: host start",
             "port": 9229,
             "restart": true,
             "presentation": {
-                "hidden": true,
-                "group": "",
-                "order": 1
-            },
-            "postDebugTask": "Terminate All Tasks"
+                "hidden": true
+            }
         }
     ]
 }
